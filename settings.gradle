@@ -5,7 +5,7 @@ println "ProjectRootDir=$ProjectRootDir"
 root_name="abstest_ec"
 includeFlat root_name //仮想パス
 root_prg = project(":$root_name") //開くときには[:]が必要
-//root_prg.projectDir=new File(rootDir)
+//root_prg.projectDir=new File(rootDir,"abstest_ec") //[NOTE]フォルダ名と同名のため指定しないくても includeFlatが勝手に見に行く＝＞動いてる感じ
 println "[name]=" + root_prg.name
 println "[dir ]=" + root_prg.projectDir
 
