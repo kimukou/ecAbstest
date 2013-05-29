@@ -35,6 +35,9 @@ android {
             assets.srcDirs = ['assets']
         }
 
-        instrumentTest.setRoot('tests')
+        //instrumentTest.setRoot('tests')
+		tasks.withType(Compile) {
+     	   options.encoding = 'UTF-8' 
+    	}
     }
 }
