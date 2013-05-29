@@ -1,0 +1,21 @@
+//ProjectRootDir=rootDir
+ProjectRootDir=settingsDir
+println "ProjectRootDir=$ProjectRootDir"
+
+root_name="abstest_ec"
+includeFlat root_name //仮想パス
+root_prg = project(":$root_name") //開くときには[:]が必要
+//root_prg.projectDir=new File(rootDir)
+println "[name]=" + root_prg.name
+println "[dir ]=" + root_prg.projectDir
+
+
+
+library_name="abs"
+includeFlat library_name //仮想パス
+
+lib_prg = project(":$library_name") //開くときには[:]が必要
+lib_prg.projectDir=new File(ProjectRootDir,'../actionbarsherlock_ec')
+println "[name]=" + lib_prg.name
+println "[dir ]=" + lib_prg.projectDir
+
