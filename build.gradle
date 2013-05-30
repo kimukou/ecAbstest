@@ -4,3 +4,13 @@ allprojects{
     println('all!') //動作確認のために突っ込んでるだけなので普通はいらない
 }
 */
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.4.1'
+    }
+}
