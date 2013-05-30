@@ -2,14 +2,16 @@
 ProjectRootDir=settingsDir
 println "ProjectRootDir=$ProjectRootDir"
 
+
+//[TODO]自分自身は見えてるわけなので、include や includeFlatじたいが冗長みたい
+/*
 root_name="abstest_ec"
 includeFlat root_name //仮想パス
 root_prg = project(":$root_name") //開くときには[:]が必要
 //root_prg.projectDir=new File(rootDir)
 println "[name]=" + root_prg.name
 println "[dir ]=" + root_prg.projectDir
-
-
+*/
 
 library_name="abs"
 includeFlat library_name //仮想パス

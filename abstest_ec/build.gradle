@@ -1,4 +1,5 @@
-apply from: '../build.gradle'
+//apply from: '../build.gradle'
+apply from: '_init.gradle'
 
 buildscript {
     repositories {

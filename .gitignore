@@ -5,3 +5,5 @@ target
 build
 .gradle
 *.zip
+gen
+bin

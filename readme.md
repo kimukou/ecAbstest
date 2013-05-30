@@ -1,11 +1,11 @@
 ## eclipse形式MultiProject検証コード
 
 - OK) ecAbstest直下
- - ./gradlew build
+ - ./gradlew clean build
 
 
 - NG) ecAbstest/abstest_ec から
-  - ./gradlew build
+  - ./gradlew clean build
 
 -----------------------------
 ## 現状わかっている android grade pluginの制限
