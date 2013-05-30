@@ -1,4 +1,6 @@
+/*
 allprojects{
     version = '1.0'
     println('all!') //動作確認のために突っ込んでるだけなので普通はいらない
 }
+*/

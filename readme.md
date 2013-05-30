@@ -1,11 +1,13 @@
 ## eclipse形式MultiProject検証コード
 
-- OK) ecAbstest直下
+- OK1) ecAbstest直下
  - ./gradlew clean build
 
 
-- NG) ecAbstest/abstest_ec から
+- OK2) ecAbstest/abstest_ec から
   - ./gradlew clean build
+
+- NG) OK2の構成でAndroid Studioから実行するとエラー
 
 -----------------------------
 ## 現状わかっている android grade pluginの制限
@@ -18,8 +20,7 @@
      version = '1.0'
   }
 ``
-
-の定義が必要
+の定義が必要(0.4.1からはなくても動くようになりました)
 
 - (公式サイトのようにプロジェクト下方に2階層潜る場合は上記の記述が要らない）
  - <= android grade plugin 辺の制限？
