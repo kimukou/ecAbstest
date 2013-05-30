@@ -1,4 +1,4 @@
-//[NOTE] 
+//[NOTE] buildscriptブロックをコメントにしてみる
 //  上位の    build.gradle側で実行           =>OK
 //  マスタ側で init.gradle 側で読み込んでみる  =>NG
 buildscript {

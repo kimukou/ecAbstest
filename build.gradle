@@ -1,9 +1,8 @@
-/*
 allprojects{
-    version = '1.0'
-    println('all!') //動作確認のために突っ込んでるだけなので普通はいらない
+    //version = '1.0'
+    //[NOTE]動作確認のために突っ込んでるだけなので普通はいらない
+	println "[allprojects]This is ${project.name}"
 }
-*/
 
 
 buildscript {

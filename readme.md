@@ -1,4 +1,7 @@
-## eclipse形式MultiProject検証コード
+## eclipse export形式 MultiProject検証コード
+
+see http://d.hatena.ne.jp/kimukou_26/20130529/p1
+
 
 - OK1) ecAbstest直下
  - ./gradlew clean build
