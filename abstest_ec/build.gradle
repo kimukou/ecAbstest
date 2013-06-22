@@ -1,9 +1,9 @@
 //apply from: '../build.gradle'
 apply from: 'init.gradle'
 
-//[NOTE] buildscriptブロックをコメントにしてみる
-//  上位の    build.gradle側で実行           =>OK
-//  マスタ側で init.gradle 側で読み込んでみる  =>NG
+//[NOTE] try to block comments buildscript
+//  Run in the top build.gradle      			      =>OK
+//  try to load in init.gradle on master build.grdle  =>NG
 buildscript {
     repositories {
         mavenCentral()
@@ -13,13 +13,11 @@ buildscript {
     }
 }
 
-
 apply plugin: 'android'
 
 dependencies {
     compile fileTree(dir: 'libs', includes: ['*.jar'])
-    lib_abs = project(':abs');
-    compile lib_abs
+    compile project(':abs')
 }
 
 android {

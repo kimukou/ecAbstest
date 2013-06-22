@@ -3,8 +3,8 @@ ProjectRootDir=settingsDir
 println "ProjectRootDir=$ProjectRootDir"
 
 root_name="abstest_ec"
-includeFlat root_name //仮想パス
-root_prg = project(":$root_name") //開くときには[:]が必要
+includeFlat root_name //virtual path
+root_prg = project(":$root_name") //need open [:]
 root_prg.projectDir=new File(rootDir,"abstest_ec")
 println "[name]=" + root_prg.name
 println "[dir ]=" + root_prg.projectDir
@@ -12,9 +12,9 @@ println "[dir ]=" + root_prg.projectDir
 
 
 library_name="abs"
-includeFlat library_name //仮想パス
+includeFlat library_name //virtual path
 
-lib_prg = project(":$library_name") //開くときには[:]が必要
+lib_prg = project(":$library_name") //need open [:]
 lib_prg.projectDir=new File(ProjectRootDir,'actionbarsherlock_ec')
 println "[name]=" + lib_prg.name
 println "[dir ]=" + lib_prg.projectDir

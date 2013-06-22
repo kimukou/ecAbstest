@@ -1,22 +1,31 @@
 //ProjectRootDir=rootDir
-ProjectRootDir=settingsDir
+def ProjectRootDir=settingsDir
 println "ProjectRootDir=$ProjectRootDir"
 
 
-//[TODO]自分自身は見えてるわけなので、include や includeFlatじたいが冗長みたい
+//[TODO]Myself so not visible, includeFlat itself and include redundant like
 /*
-root_name="abstest_ec"
-includeFlat root_name //仮想パス
-root_prg = project(":$root_name") //開くときには[:]が必要
+def root_name="abstest_ec"
+includeFlat root_name //vertual path
+def root_prg = project(":$root_name") //need open [:]
 root_prg.projectDir=new File("./")
 println "[name]=" + root_prg.name
 println "[dir ]=" + root_prg.projectDir
 */
 
-library_name="abs"
-includeFlat library_name //仮想パス
+/*
+//[NOTE] not run
+include ":./" //vertual path
+def root_prg = project(":./") //need open [:]
+//root_prg.projectDir=new File("./")
+println "[name]=" + root_prg.name
+println "[dir ]=" + root_prg.projectDir
+*/
 
-lib_prg = project(":$library_name") //開くときには[:]が必要
+def library_name="abs"
+includeFlat library_name //vertual path
+
+def lib_prg = project(":$library_name") //need open [:]
 lib_prg.projectDir=new File(ProjectRootDir,'../actionbarsherlock_ec')
 println "[name]=" + lib_prg.name
 println "[dir ]=" + lib_prg.projectDir

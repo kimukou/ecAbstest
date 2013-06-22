@@ -1,39 +1,44 @@
-## eclipse export形式 MultiProject検証コード
+## eclipse export MultiProject verification code
 
-see http://d.hatena.ne.jp/kimukou_26/20130529/p1
+- [Japanise-readme.md](readme_ja.md)
+
+- see http://d.hatena.ne.jp/kimukou_26/20130529/p1
 
 
-- OK1) ecAbstest直下
+- OK1) under ecAbstest
  - ./gradlew clean build
 
 
-- OK2) ecAbstest/abstest_ec から
+- OK2) under ecAbstest/abstest_ec
   - ./gradlew clean build
 
-- NG) OK2の構成でAndroid Studioから実行するとエラー
+- NG) OK2 structure on Android Studio is error
 
 -----------------------------
-## 現状わかっている android grade pluginの制限
+## Limit of android grade plugin known status
 
-- 浅い階層(1階層 or 相対パス)で見るために
- - includeFlat を使うと
-
-``
-  allprojects{
+- To see (1 hierarchy or relative path) shallow hierarchy
+ - using includeFlat 
+ 
+```
+  subprojects{
      version = '1.0'
   }
-``
-の定義が必要(0.4.1からはなくても動くようになりました)
+```
 
-- (公式サイトのようにプロジェクト下方に2階層潜る場合は上記の記述が要らない）
- - <= android grade plugin 辺の制限？
+need define (from 0.4.1 run, prepare not need write)
+
+- (The above description does not need If you dive in two-tier project downward as the official site)
+ - <= android grade plugin limit?
 
 
 -----------------------------
-## ANDROID_HOME等に環境パスをしていない場合
+## If you do not have the environment path to ANDROID_HOME etc.
  
-- gradle.properties 等が別途必要
+- gradle.properties Required separately
 
-``
-systemProp.ANDROID_HOME='/Applications/android-sdks'
-``
+```
+systemProp.android.home='/Applications/android-sdks'
+```
+
+Or $HOME/.gradle/gradle.properties put.
